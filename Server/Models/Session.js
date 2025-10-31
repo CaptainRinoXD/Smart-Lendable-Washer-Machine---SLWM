@@ -34,6 +34,10 @@ const sessionSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    washMode: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "WashMode",
+    },
     paymentStatus: {
       type: String,
       enum: ["unpaid", "paid", "refunded"],
